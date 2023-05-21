@@ -15,11 +15,11 @@ def register(request):
         if form.is_valid():
             form.save()
             print("IN HERE")
-            messages.success(request,"SuceessFully registered")
+            messages.success(request,"Successfully registered")
             addFace(request.POST['face_id'])
             redirect('home')
         else:
-            messages.error(request,"Account registered failed")
+            messages.error(request,"Account registration failed")
     else:
         form = ResgistrationForm()
 

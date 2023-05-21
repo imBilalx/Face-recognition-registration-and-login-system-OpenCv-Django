@@ -1,3 +1,5 @@
+import sqlite3
+
 import cv2
 import os
 # import sqlite3
@@ -10,15 +12,16 @@ recognizer = cv2.face.LBPHFaceRecognizer_create()
 
 
 # # Create a connection witn databse
-# conn = sqlite3.connect('db.sqlite3')
-# if conn != 0:
-#     print("Connection Successful")
-# else:
-#     print('Connection Failed')
-#     exit()
+conn = sqlite3.connect('db.sqlite3')
+if conn != 0:
+    print("Connection Successful")
+else:
+    print('Connection Failed')
+    exit()
 
 # Creating table if it doesn't already exists
-# conn.execute('''create table if not exists facedata ( id int primary key, name char(20) not null)''')
+#conn.execute
+    # ('''create table if not exists facedata ( id int primary key, name char(20) not null)''')
 
 class FaceRecognition:    
 
